@@ -1,6 +1,6 @@
 # Install [IBM DB2](https://www.ibm.com/docs/en/db2/11.1?topic=administration-db2-data-servers)
 
-      _This recipe is for deploying the DB2 on Red Hat Enterprise Linux_.
+   > _This recipe is for deploying the DB2 on Red Hat Enterprise Linux_.
 
 ### Section A: Subscription Manager
 <details>
