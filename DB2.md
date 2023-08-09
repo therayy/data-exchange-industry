@@ -48,7 +48,7 @@ yum repolist
 ```
 </details>
 
-### Section B: DB2 Pre Check.
+### Section B: DB2 Pre Check
 <details>
     <summary> Running precheck script to make sure that you have all packages </summary>
 
