@@ -124,10 +124,38 @@ chmod +x ./db2ls
 ./db2ls
 ```
    > 💡 **OUTPUT**  
-   > you should see the following 
+   > You should see the following 
 
 | Install Path | Level | Install Date | UID |
 | --- | --- | --- | --- |
 | /opt/ibm/db2/V11.5 | 11.5.0.0 | --/--/---- | 0 -> root |
+5. Validation
+```bash
+ls /usr/local/bin | grep db2  #output 
+```
+   > 💡 **OUTPUT**  
+   > `db2greg` & `db2ls`
+```bash
+/user/local/bin/db2grep -dump
+```
+   > 💡 **OUTPUT**  
+   > You will see all your installation information
+
+```bash
+/opt/ibm/db2/V11.5/bin/db2val
+```
+   > 💡 **OUTPUT**  
+   > You should see that `db2val command is running`, installation file ..../db2/V11.5 was successful & The `db2val command completed successfully`
+6. Check log file for errors
+```bash
+cd /tmp
+ls | grep db2val-
+```
+Copy the output and run this command to debug
+```bash
+more /tmp/db2val-xxxxx.log # The output you copied above.
+```
+   > 💡 **OUTPUT**  
+   > You should see that all success and no ~~errors~~
 </details>
 
