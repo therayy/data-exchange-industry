@@ -128,6 +128,6 @@ chmod +x ./db2ls
 
 | Install Path | Level | Install Date | UID |
 | --- | --- | --- | --- |
-| /opt/ibm/db2/V11.5 | 11.5.0.0 | --/--/-- | 0 -> root |
+| /opt/ibm/db2/V11.5 | 11.5.0.0 | --/--/---- | 0 -> root |
 </details>
 
