@@ -159,9 +159,9 @@ more /tmp/db2val-xxxxx.log # The output you copied above.
    > You should see that all success and no ~~errors~~
 </details>
 
-### Section D
+### Section D: DB2 Instance & Database Creation
 <details>
-    <summary> Creating DB2 Instance & Database Creation </summary>
+    <summary> Deploying DB2 Instance & First Database Creation </summary>
 
 1. First we need to make sure if the `userid` exists.
 ```bash
