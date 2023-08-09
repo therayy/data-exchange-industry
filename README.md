@@ -49,8 +49,10 @@ yum repolist
 </details>
 
 ### Section B: DB2 Pre Check.
+<details>
+    <summary> Running precheck script to make sure that you have all packages </summary>
 
-1. Copying `DB2 Tar file` into your server and extracting it.
+1. Copying `DB2 tar file` into your server and extracting it.
 ```bash
 Copy DB2_Svr_11.5_Linux_x86-64.tar to server
 tar -xvf DB2_Svr_11.5_Linux_x86-64.tar to server
@@ -67,5 +69,35 @@ chmod +x ./db2prereqcheck
 ```bash
 ./db2prereqcheck -i -l 
 ``` 
-   > 💡 **NOTE**  
+   > 💡 **OUTPUT**  
    > Should return without any missing packages.
+
+_OR_
+
+   > **⚠️** **FAILED** 
+
+   > `The db2prereqcheck utility failed to find the following libary file: libstdc++.so.6`
+
+4. Assuming this is the only one missing to fix that you will need to run the following.
+```bash
+yum install libstdc++.so.6 # Assuming this is the one mentioned on failure message
+``` 
+Also you will need to run 
+```bash
+ldconfig -p | grep libpam.so.*
+```
+   > 💡 **OUTPUT**  
+   > Should return with `libpam package` you will have to install as well.
+
+```bash
+yum install libpam.so.0 #Assuming this was on your output from the previous command
+```
+5. Re-run the precheck again to make sure.
+```bash
+cd /server_dec
+./db2prereqcheck -i -l
+```
+</details>
+
+### Section C: 
+
