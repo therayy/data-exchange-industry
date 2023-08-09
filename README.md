@@ -59,7 +59,7 @@ tar -xvf DB2_Svr_11.5_Linux_x86-64.tar to server
 ```
 2. Access `DB2_Svr Directory`
 ```bash
-cd /server_dec
+cd /DB2_Svr_11.5_Linux_x86-64/server_dec
 ls -la
 ```
 3. Run the script that lists all the missing packages, you will have to permit that script.
@@ -99,5 +99,35 @@ cd /server_dec
 ```
 </details>
 
-### Section C: 
+### Section C: Install DB2
+<details>
+    <summary> Installing DB2 by running the DB2 Install script </summary>
+
+1. Make sure you at the right directory
+```bash
+cd /DB2_Svr_11.5_Linux_x86-64/server_dec
+```
+2. Permit & Run the script.
+```bash
+chmod +x ./db2_install
+./db2_install
+```
+3. Prompts will show up 
+    - License: `YES`
+    - Specify one of the DB2 Products: `SERVER`
+    - PureScale: `NO`
+   > 💡 **OUTPUT**  
+   > Should return with `The execution completed successfully` after running `59` Tasks, its ok to see warnings not ~~ERRORS~~.
+4. Check the Install
+```bash
+chmod +x ./db2ls
+./db2ls
+```
+   > 💡 **OUTPUT**  
+   > you should see the following 
+
+        | Install Path | Level | Install Date | UID |
+        | --- | --- | --- | --- |
+        | /opt/ibm/db2/V11.5 | 11.5.0.0 | --/--/-- | 0 -> root |
+</details>
 
