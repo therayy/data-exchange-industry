@@ -66,7 +66,6 @@ chmod +x ./db2prereqcheck
 ```
 ```bash
 ./db2prereqcheck -i -l 
-```
-
-    > 💡 **NOTE**  
-    > Should return without any missing packages.
+``` 
+   > 💡 **NOTE**  
+   > Should return without any missing packages.
