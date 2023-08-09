@@ -180,7 +180,7 @@ passwd db2inst1 #create a new password & memorize it I used db2inst1 as the pass
 ```
    > 💡 **OUTPUT**  
    > You should see 4 Tasks with `The execution completed successfully`
-3. Use your `userid` to start your instance.
+3. Use your `userid` to start your instance
 ```bash
 su - db2inst1 #login with db2inst1
 ```
