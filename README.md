@@ -159,3 +159,64 @@ more /tmp/db2val-xxxxx.log # The output you copied above.
    > You should see that all success and no ~~errors~~
 </details>
 
+### Section D
+<details>
+    <summary> Creating DB2 Instance & Database Creation </summary>
+
+1. First we need to make sure if the `userid` exists.
+```bash
+id db2inst1
+``` 
+IF NOT
+```bash
+useradd -m db2inst1
+```
+```bash
+passwd db2inst1 #create a new password & memorize it I used db2inst1 as the password as well.
+```
+2. Create DB2 Instance
+```bash
+/opt/ibm/db2/V11.5/instance/db2icrt -u db2inst1 db2inst1
+```
+   > 💡 **OUTPUT**  
+   > You should see 4 Tasks with `The execution completed successfully`
+3. Use your `userid` to start your instance.
+```bash
+su - db2inst1 #login with db2inst1
+```
+Find the port to connect to
+```bash
+cat /etc/services | grep db2c_db2inst1 #In my case it is 50000
+```
+4. Start the DB2 instance.
+```bash 
+db2start
+```
+   > 💡 **OUTPUT**  
+   > You should see `DB2START processing was successful.`
+5. Check for the listen port
+```bash
+netstat -na | grep 50000 #Assuming that your port was 50000 from the step D.3
+```
+   > 💡 **OUTPUT**  
+   > You should see the record ending on your right side with `LISTEN`
+6. Create your first Database using `db2sampl`
+```bash
+db2sampl -name <DATABASE_NAME>
+```
+7. Test Connection
+```bash
+su - db2inst1
+```
+```sql
+db2 connect to <DATABASE_NAME>
+```
+   > 💡 **OUTPUT**  
+        > #### Database Connection Information
+ 
+ | Database server        | = DB2/LINUXX8664 11.5.0.0 |
+ | --- | --- | 
+ | SQL authorization ID  | = DB2INST1 |
+ | Local database alias  | = <DATABASE_NAME> | 
+
+</details>
