@@ -49,8 +49,6 @@ yum repolist
 </details>
 
 ### Section B: DB2 Pre Check.
-<detatils>
-    <summary> Making sure that you have all packages </summary>
 
 1. Copying `DB2 Tar file` into your server and extracting it.
 ```bash
@@ -70,6 +68,5 @@ chmod +x ./db2prereqcheck
 ./db2prereqcheck -i -l 
 ```
 
-> 💡 **NOTE**  
-> 
-</details>
+    > 💡 **NOTE**  
+    > Should return without any missing packages.
