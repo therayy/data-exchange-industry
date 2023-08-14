@@ -161,8 +161,11 @@ cd /tmp
 ls | grep db2val-
 ```
 Copy the output and run this command to debug
+```bash 
+export db2val="<COPIED-DB2VAL.log>"
+```
 ```bash
-more /tmp/db2val-xxxxx.log # The output you copied above.
+more /tmp/${db2val} 
 ```
    > 💡 **OUTPUT**  
    > You should see that all success and no ~~errors~~
