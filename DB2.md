@@ -136,10 +136,19 @@ ls /usr/local/bin | grep db2  #output
    > 💡 **OUTPUT**  
    > `db2greg` & `db2ls`
 ```bash
-/usr/local/bin/db2grep -dump
+cd /usr/local/bin
+```
+```bash
+db2grep -dump
 ```
    > 💡 **OUTPUT**  
    > You will see all your installation information
+      ```
+      S,TSA,4.1.0.4,/opt/IBM/tsamp,DG_NOT_ALLOWED,DB2_INSTALLED,0,0,-,1692051794,0
+      S,RSCT,3.2.3.2,/usr/sbin/rsct,DG_NOT_ALLOWED,DB2_INSTALLED,0,0,-,1692051794,0
+      S,DB2,11.5.0.0,/opt/ibm/db2/V11.5,,,0,0,,1692051851,0
+      V,DB2GPRF,DB2SYSTEM,localhost.localdomain,/opt/ibm/db2/V11.5,
+      ```
 
 ```bash
 /opt/ibm/db2/V11.5/bin/db2val
