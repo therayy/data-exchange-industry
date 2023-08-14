@@ -61,4 +61,12 @@ CREATE REGULAR TABLESPACE TS_REG16_ICCDB  PAGESIZE 16K  BUFFERPOOL  ICCDB_16KBP 
 ```sql
 CONNECT RESET
 ```
+3. Turn off the firewall
+```bash
+su - root
+systemctl disable firewalld
+```
+   > 💡 **OUTPUT**  
+   >> ```Removed /etc/systemd/system/multi-user.target.wants/firewalld.service.```
+   >> ``` Removed /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.``` 
 </details>
