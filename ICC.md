@@ -1,4 +1,4 @@
-# Install [IBM ICC](https://www.ibm.com/docs/en/control-center/6.3.0)
+# Install [IBM Sterling Control Center](https://www.ibm.com/docs/en/control-center/6.3.0)
 
    > _This recipe is for deploying the IBM Sterling Control Center on Red Hat Enterprise Linux assuiming you already got your system subsription done and DB2 deployed_.
 
@@ -27,6 +27,24 @@ CREATE DATABASE ICCDB AUTOMATIC STORAGE YES USING CODESET UTF-8 TERRITORY DEFAUL
    > ```DB20000I  The CREATE DATABASE command completed successfully.``` 
 ```sql
 CONNECT TO ICCDB
+```
+```sql
+CREATE BUFFERPOOL ICCDB_04KBP IMMEDIATE SIZE AUTOMATIC PAGESIZE 4K
+```
+```sql
+CREATE BUFFERPOOL ICCDB_08KBP IMMEDIATE SIZE AUTOMATIC PAGESIZE 8K
+```
+```sql
+CREATE BUFFERPOOL ICCDB_16KBP IMMEDIATE SIZE AUTOMATIC PAGESIZE 16K
+```
+```sql
+CONNECT RESET
+```
+```sql
+CONNECT TO ICCDB
+```
+```sql
+
 ```
 ```sql
 CREATE  USER TEMPORARY  TABLESPACE SCCUSERTMP PAGESIZE 32K  BUFFERPOOL  IBMDEFAULTBP 
