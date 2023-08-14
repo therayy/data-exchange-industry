@@ -136,7 +136,7 @@ ls /usr/local/bin | grep db2  #output
    > 💡 **OUTPUT**  
    > `db2greg` & `db2ls`
 ```bash
-/user/local/bin/db2grep -dump
+/usr/local/bin/db2grep -dump
 ```
    > 💡 **OUTPUT**  
    > You will see all your installation information
