@@ -206,6 +206,7 @@ db2start
 ```
    > 💡 **OUTPUT**  
    > You should see `DB2START processing was successful.`
+### This is a good snapshot to take
 5. Check for the listen port
 ```bash
 netstat -na | grep 50000 #Assuming that your port was 50000 from the step D.3
