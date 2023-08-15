@@ -221,6 +221,7 @@ chmod +x ./config.sh
    3. All Products
    Choose Product Option based on your entitlement [0] : 
    ``` 
+   #### Keystore and Trust store configuration
    - [x] Enter `3` 
    - [x] Are the values that were entered correct? `Y`
    - [x] Do you want to continue with the configuration? `Y`
@@ -269,7 +270,7 @@ chmod +x ./config.sh
    - [x] Email user name: `.`
    - [x] Email user Password: `.`
    - [x] Email from address: Press `ENTER`
-   - [x] Designated Adminstrator email [admin@ibm.net]: Press `<ENTER>` 
+   - [x] Designated Adminstrator email admin@ibm.net: Press `<ENTER>` 
    - [x] Are you sure about your selection? `Y`
    #### JMS configuration
    - [x] Do you wan to enable JMS events? `N`
