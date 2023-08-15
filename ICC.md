@@ -229,7 +229,7 @@ chmod +x ./config.sh
    - [x] Enter the Path to your store file: Press `<ENTER>`
    - [x] Enter the Password for your keystore: `<passw0rd>`
    - [x] Are the values that were entered correct? `Y`
-   *** Database Configuration ***
+  #### Database Configuration 
    - [x] Provide a database type: Enter `DB2`
    - [x] Provide the full path of the db2jcc.jar: `/opt/ibm/db2/V11.5/java/db2jcc4.jar`
    - [x] Provide the full path of the license file: `/opt/ibm/db2/V11.5/java/db2jcc_license_cu.jar`
