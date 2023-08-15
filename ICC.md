@@ -229,7 +229,7 @@ chmod +x ./config.sh
    - [x] Enter the Path to your store file. Press <ENTER>
    - [x] Enter the Password for your keystore <passw0rd>
    - [x] Are the values that were entered correct? `Y`
-   - [-] 
+   - [-] sadas
 
 
 </details>
