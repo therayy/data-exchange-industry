@@ -215,12 +215,12 @@ chmod +x ./config.sh
    > 💡 **OUTPUT**  
    > IBM Sterling Control Center - Not configured...
    
-      ```
-      1. IBM Sterling Control Center Director
-      2. IBM Sterling Control Center Monitor
-      3. All Products
-      Choose Product Option based on your entitlement [0] : 
-      ``` 
+   ```
+   1. IBM Sterling Control Center Director
+   2. IBM Sterling Control Center Monitor
+   3. All Products
+   Choose Product Option based on your entitlement [0] : `3`
+   ``` 
 
 3. 
 
