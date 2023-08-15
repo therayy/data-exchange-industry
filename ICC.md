@@ -2,7 +2,7 @@
 
    > _This recipe is for deploying the IBM Sterling Control Center on Red Hat Enterprise Linux assuiming you already got your system subsription done and DB2 deployed_.
 
-### Section [A]: Pre-Cofiguration
+### Section [A: Pre-Cofiguration]()
 <details>
     <summary> Starting your DB2 & Createing your Database, turning off your firewall and adding your hostname into etc/hosts </summary>
 
@@ -90,7 +90,7 @@ Press `ESC` then type `:wq!` to save and quit
 
 </details>
 
-### Section [B]: Certificates and ICC Pre-Installation
+### Section [B: Certificates and ICC Pre-Installation]()
 <details>
     <summary> Keystore & Truststore certs and ICC configurations </summary>
 
@@ -199,7 +199,7 @@ keytool -list -keystore /opt/IBM/SterlingControlCenter/conf/security/CCenter.key
    ```
 </details>
 
-### Section [C]: Configuration, Installation & Validation
+### Section [C: Configuration, Installation & Validation]()
 <details>
     <summary> Confguration of ICC, Installing ICC and how to vaildate and watch the logs and access the ui  </summary>
 
@@ -237,7 +237,7 @@ chmod +x ./config.sh
    - [x] Provide the database host name: Press <ENTER>
    - [x] Provide the database port number: Press <ENTER>
    - [x] Provide the database user name: `db2inst1`
-   - [x] Database Passwrod: <YOUR DATABSE PASSWORD>
+   - [x] Database Passwrod: `<YOUR DATABSE PASSWORD>``
    - [x] Provide the database name: `iccdb`
    - [x] Are the values that were entered correct? `Y`
    - [x] Do you want to partition your database tables `N` `# we do that in Prod ONLY!`
