@@ -15,10 +15,10 @@ db2start
 db2
 ```
    > 💡 **OUTPUT**  
-   > your terminal should look like that 
-   ```
-   db2 =>
-   ```
+   >> your terminal should look like that 
+      ```
+      db2 =>
+      ```
 2. Create ICC database.
 ```sql
 CREATE DATABASE ICCDB AUTOMATIC STORAGE YES USING CODESET UTF-8 TERRITORY DEFAULT COLLATE USING SYSTEM PAGESIZE 32768
@@ -162,13 +162,13 @@ openssl req -new -newkey rsa:4096 -days 365 -nodes -x509   \
 	-out /opt/IBM/certs/ccenter.cert
 ```
    > 💡 **OUTPUT**  
-   > Your terminal should look like that 
-   ```
-   Generating a RSA private key
-   .......++++
-   writing new private key to '/opt/IBM/certs/ccenter.key'
-   -----
-   ```
+   >> Your terminal should look like that 
+      ```
+      Generating a RSA private key
+      .......++++
+      writing new private key to '/opt/IBM/certs/ccenter.key'
+      -----
+      ```
 5. Create Key Cert
 ```bash
 cat /opt/IBM/certs/ccenter.cert \
@@ -203,6 +203,23 @@ keytool -list -keystore /opt/IBM/SterlingControlCenter/conf/security/CCenter.key
 <details>
     <summary> Confguration of ICC, Installing ICC and how to vaildate and watch the logs and access the ui  </summary>
 
-1. Make sure that you started your DB2 `db2start`
+1. Make sure that you started your DB2 `db2start` remember you need to login using `db2inst1`
+
+2. Run the config.sh
+```bash
+su - root
+cd /opt/IBM/SterlingControlCenter/bin
+chmod +x ./config.sh
+./config.sh
+```
+   > 💡 **OUTPUT**  
+   >> ```IBM Sterling Control Center - Not configured...
+      1. IBM Sterling Control Center Director
+      2. IBM Sterling Control Center Monitor
+      3. All Products
+      Choose Product Option based on your entitlement [0] : 
+      ``` 
+
+3. 
 
 </details>
