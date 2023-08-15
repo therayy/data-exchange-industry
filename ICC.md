@@ -90,7 +90,7 @@ Press `ESC` then type `:wq!` to save and quit
 
 </details>
 
-### Section B: [Certificates and ICC Pre-Installation]()
+### Section B: [Certificates and ICC Pre-Installation](./ICC.md)
 <details>
     <summary> Keystore & Truststore certs and ICC configurations </summary>
 
@@ -199,7 +199,7 @@ keytool -list -keystore /opt/IBM/SterlingControlCenter/conf/security/CCenter.key
    ```
 </details>
 
-### Section C: [Configuration, Installation & Validation]()
+### Section C: [Configuration, Installation & Validation](./ICC.md)
 <details>
     <summary> Confguration of ICC, Installing ICC and how to vaildate and watch the logs and access the ui  </summary>
 
