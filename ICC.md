@@ -249,10 +249,12 @@ chmod +x ./config.sh
    - [x] Are the values that were entered correct? `Y`
    - [x] Choose a time zone number: `1`
    - [x] Are the values that were entered correct? `Y`
+   #### HTTP/HTTPS configuration
    - [x] HTTP connector configuration: Press `<ENTER>` on all Prompts to set the default value.
    - [x] Do you want to configure the secure HTTP connector? `Y`
    - [x] Are the values that were entered correct? `Y`
    - [x] Secure HTTP connector configuration: Press `<ENTER>` on all Prompts to set the default value.
+   #### Web Application Server Configuration
    - [x] Jetty Web Application server configuration: Press `<ENTER>` on all Prompts to set the default value.
    - [x] Do you want to continue with the Web Application server configuration? `Y`
    - [x] Provide the host name of the even processor (engine): `icc`
@@ -269,8 +271,10 @@ chmod +x ./config.sh
    - [x] Email from address: Press `ENTER`
    - [x] Designated Adminstrator email [admin@ibm.net]: Press `<ENTER>` 
    - [x] Are you sure about your selection? `Y`
+   #### JMS configuration
    - [x] Do you wan to enable JMS events? `N`
    - [x] Are you sure about your selection? `Y`
+   #### External Authentication Server
    - [x] Do you want to configure External Authentication Server connection settings(Y/N)? `Y`
    - [x] Seas Configuration: Press `<ENTER>` on all Prompts to set the default value.
 
@@ -279,15 +283,10 @@ chmod +x ./config.sh
    ```
       Summary tables purge settings....
    --------------------------------------------------------------------
-
    Currently summary tables purge setting is set to 180 days.
-
    Data will be purged after 180 days. This value can be changed in System Settings.
-
    Heap value info : Max heap value found is = 4096MB
-
    The IBM Control Center event processor (engine) configuration is complete.
-
    Updating permissions for encryption key files...
    Updating permissions for encryption key files...Done!
 
