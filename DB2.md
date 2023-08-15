@@ -2,7 +2,7 @@
 
    > _This recipe is for deploying the DB2 on Red Hat Enterprise Linux_.
 
-### Section A: Subscription Manager
+### Section A: [Subscription Manager]()
 <details>
     <summary> Facing trouble while running yum command </summary>
 
@@ -48,7 +48,7 @@ yum repolist
 ```
 </details>
 
-### Section B: DB2 Pre Check
+### Section B: [DB2 Pre-Check]()
 <details>
     <summary> Running precheck script to make sure that you have all packages </summary>
 
@@ -99,7 +99,7 @@ cd /server_dec
 ```
 </details>
 
-### Section C: Install DB2
+### Section C: [Install DB2]()
 <details>
     <summary> Installing DB2 by running the DB2 Install script </summary>
 
@@ -171,7 +171,7 @@ more ${db2val}
    > You should see that all success and no ~~errors~~
 </details>
 
-### Section D: DB2 Instance & Database Creation
+### Section D: [DB2 Instance & Database Creation]()
 <details>
     <summary> Deploying DB2 Instance & First Database Creation </summary>
 
@@ -233,3 +233,5 @@ db2 connect to <DATABASE_NAME>
  | Local database alias  | = <DATABASE_NAME> | 
 
 </details>
+
+### NEXT STEPS Deploy [Sterling Control Center](./ICC.md)
