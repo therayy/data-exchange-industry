@@ -219,8 +219,9 @@ chmod +x ./config.sh
    1. IBM Sterling Control Center Director
    2. IBM Sterling Control Center Monitor
    3. All Products
-   Choose Product Option based on your entitlement [0] : `3`
+   Choose Product Option based on your entitlement [0] : 
    ``` 
+   Pick `3`
 
 3. 
 
