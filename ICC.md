@@ -213,7 +213,8 @@ chmod +x ./config.sh
 ./config.sh
 ```
    > 💡 **OUTPUT**  
-   >> ``` IBM Sterling Control Center - Not configured...
+   >> IBM Sterling Control Center - Not configured...
+      ```
       1. IBM Sterling Control Center Director
       2. IBM Sterling Control Center Monitor
       3. All Products
