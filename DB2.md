@@ -234,4 +234,4 @@ db2 connect to `<DATABASE_NAME>`
 
 </details>
 
-#### NEXT STEPS Deploy [Sterling Control Center](./ICC.md)
+#### _NEXT STEPS Deploy [Sterling Control Center](./ICC.md)_
