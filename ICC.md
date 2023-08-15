@@ -229,6 +229,7 @@ chmod +x ./config.sh
    - [x] Enter the Path to your store file: Press `<ENTER>`
    - [x] Enter the Password for your keystore: `<passw0rd>`
    - [x] Are the values that were entered correct? `Y`
+   *** Database Configuration ***
    - [x] Provide a database type: Enter `DB2`
    - [x] Provide the full path of the db2jcc.jar: `/opt/ibm/db2/V11.5/java/db2jcc4.jar`
    - [x] Provide the full path of the license file: `/opt/ibm/db2/V11.5/java/db2jcc_license_cu.jar`
@@ -267,5 +268,28 @@ chmod +x ./config.sh
    - [x] Email user Password: `.`
    - [x] Email from address: Press `ENTER`
    - [x] Designated Adminstrator email [admin@ibm.net]: Press `<ENTER>` 
+   - [x] Are you sure about your selection? `Y`
+   - [x] Do you wan to enable JMS events? `N`
+   - [x] Are you sure about your selection? `Y`
+   - [x] Do you want to configure External Authentication Server connection settings(Y/N)? `Y`
+   - [x] Seas Configuration: Press `<ENTER>` on all Prompts to set the default value.
 
+   > 💡 **OUTPUT**  
+   > Your terminal should look like that 
+   ```
+      Summary tables purge settings....
+   --------------------------------------------------------------------
+
+   Currently summary tables purge setting is set to 180 days.
+
+   Data will be purged after 180 days. This value can be changed in System Settings.
+
+   Heap value info : Max heap value found is = 4096MB
+
+   The IBM Control Center event processor (engine) configuration is complete.
+
+   Updating permissions for encryption key files...
+   Updating permissions for encryption key files...Done!
+
+   ```
 </details>
