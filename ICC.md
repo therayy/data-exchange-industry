@@ -148,4 +148,61 @@ https://<hostname>:<port> or http://<hostname>:<port>
 ```
 
 ### Good time to take a snapshot `shutdown -h now` and snapshot and resume.
+
+4. Generate Sefl Assigned certificate for ICC make sure that the `CN` & `DNS` are matching with your `HostName`
+```bash
+su - root
+mkdir /opt/IBM/certs
+```
+```bash
+openssl req -new -newkey rsa:4096 -days 365 -nodes -x509   \
+    	-subj "/C=US/ST=California/L=Orange/O=IBM/CN=icc.sterling.com" \
+        -addext "subjectAltName = DNS:icc.sterling.com" \
+    	-keyout /opt/IBM/certs/ccenter.key \
+	-out /opt/IBM/certs/ccenter.cert
+```
+   > 💡 **OUTPUT**  
+   > Your terminal should look like that 
+   ```
+   Generating a RSA private key
+   .......++++
+   writing new private key to '/opt/IBM/certs/ccenter.key'
+   -----
+   ```
+5. Create Key Cert
+```bash
+cat /opt/IBM/certs/ccenter.cert \
+	/opt/IBM/certs/ccenter.key > \
+	/opt/IBM/certs/ccenter.pem
+```
+6. Import `keycert` into `keystore` and set an easy password to remember i.e `passw0rd`
+```bash
+openssl pkcs12 -export -name ccenter \
+	-in /opt/IBM/certs/ccenter.cert \
+	-inkey /opt/IBM/certs/ccenter.key \
+	-out /opt/IBM/SterlingControlCenter/conf/security/CCenter.keystore 
+```
+7. Import Trusted Cert a `truststore` file
+```bash
+keytool -import -keystore /opt/IBM/SterlingControlCenter/conf/security/CCenter.truststore \
+	-noprompt -file /opt/IBM/certs/ccenter.cert  \
+	-alias ccenter -storepass passw0rd 
+```
+8. Keytool list step
+```bash
+keytool -list -keystore /opt/IBM/SterlingControlCenter/conf/security/CCenter.keystore -storepass <YOUR PASSWORD>
+```
+   > 💡 **OUTPUT**  
+   > your terminal should look like that 
+   ```
+   Certificate fingerprint (SHA-256): 4C:14:64:85:39:18:C0:21:C0:7F:B4:8F:11:14:34:0F:4E:66:8B:70:C6:52:7A:15:E0:8D:8A:34:9B:91:D3:25
+   ```
+</details>
+
+### Section C: Configuration, Installation & Validation
+<details>
+    <summary> Confguration of ICC, Installing ICC and how to vaildate and watch the logs and access the ui  </summary>
+
+1. Make sure that you started your DB2 `db2start`
+
 </details>
