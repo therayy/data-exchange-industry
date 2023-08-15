@@ -221,8 +221,15 @@ chmod +x ./config.sh
    3. All Products
    Choose Product Option based on your entitlement [0] : 
    ``` 
-   Pick `3`
+   - [x] Pick `3` 
+   - [x] Are the values that were entered correct? `Y`
+   - [x] Do you want to continue with the configuration `Y`
+   - [x] Provide the path to your keystore. Press <ENTER>
+   - [x] Enter the Password for your keystore <passw0rd>
+   - [x] Enter the Path to your store file. Press <ENTER>
+   - [x] Enter the Password for your keystore <passw0rd>
+   - [x] Are the values that were entered correct? `Y`
+   - [-] 
 
-3. 
 
 </details>
