@@ -2,7 +2,7 @@
 
    > _This recipe is for deploying the IBM Sterling Control Center on Red Hat Enterprise Linux assuiming you already got your system subsription done and DB2 deployed_.
 
-### Section A: [Pre-Cofiguration]()
+### Section A: [Pre-Cofiguration](./ICC.md)
 <details>
     <summary> Starting your DB2 & Createing your Database, turning off your firewall and adding your hostname into etc/hosts </summary>
 
