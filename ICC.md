@@ -292,4 +292,44 @@ chmod +x ./config.sh
    Updating permissions for encryption key files...Done!
 
    ```
+3. Lunch ICC
+```bash
+cd /opt/IBM/SterlingControlCenter/bin
+./runEngine.sh
+```
+   > 💡 **OUTPUT**  
+   > Your terminal should look like that 
+   ```
+   Backing up nohup.out file...
+   Product Name: IBM Sterling Control Center
+   Product Name: IBM Sterling Control Center
+   Info: Loading...common.logging.log4j.LogFactory...
+   Backing up log files...
+   Product Name: IBM Sterling Control Center
+   The directory : ../log is being backed up.
+   The directory : ../log back up - Done.
+   Starting IBM Sterling Control Center...
+   Check nohup.out for startup status...
+   ```
+```bash
+tail -f nohup.out #This allows you to observe live logs.
+```
+   > 💡 **OUTPUT**  
+   > Your terminal should look like that 
+   ```
+   1. Web UI URL 
+   http://icc:58082
+
+   2. REST API Documentation(Swagger) URL
+   http://icc:58082/swagger-ui.html#
+
+   3. URL for Connect:Direct server to self-register with Control Center Director
+   http://icc:58082/osa/events/post
+
+   4. Control Center Monitor Event Repository URL 
+   http://icc:58082/sccwebclient/events
+
+   Web Server is running...
+   ```
+
 </details>
