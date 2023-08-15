@@ -2,7 +2,7 @@
 
    > _This recipe is for deploying the IBM Sterling Control Center on Red Hat Enterprise Linux assuiming you already got your system subsription done and DB2 deployed_.
 
-### Section A: Pre-Cofiguration
+### Section [A]: Pre-Cofiguration
 <details>
     <summary> Starting your DB2 & Createing your Database, turning off your firewall and adding your hostname into etc/hosts </summary>
 
@@ -90,7 +90,7 @@ Press `ESC` then type `:wq!` to save and quit
 
 </details>
 
-### Section B: Certificates and ICC Pre-Installation
+### Section [B]: Certificates and ICC Pre-Installation
 <details>
     <summary> Keystore & Truststore certs and ICC configurations </summary>
 
@@ -199,7 +199,7 @@ keytool -list -keystore /opt/IBM/SterlingControlCenter/conf/security/CCenter.key
    ```
 </details>
 
-### Section C: Configuration, Installation & Validation
+### Section [C]: Configuration, Installation & Validation
 <details>
     <summary> Confguration of ICC, Installing ICC and how to vaildate and watch the logs and access the ui  </summary>
 
@@ -221,15 +221,31 @@ chmod +x ./config.sh
    3. All Products
    Choose Product Option based on your entitlement [0] : 
    ``` 
-   - [x] Pick `3` 
+   - [x] Enter `3` 
    - [x] Are the values that were entered correct? `Y`
-   - [x] Do you want to continue with the configuration `Y`
-   - [x] Provide the path to your keystore. Press <ENTER>
-   - [x] Enter the Password for your keystore <passw0rd>
-   - [x] Enter the Path to your store file. Press <ENTER>
-   - [x] Enter the Password for your keystore <passw0rd>
+   - [x] Do you want to continue with the configuration? `Y`
+   - [x] Provide the path to your keystore: Press <ENTER>
+   - [x] Enter the Password for your keystore: <passw0rd>
+   - [x] Enter the Path to your store file: Press <ENTER>
+   - [x] Enter the Password for your keystore: <passw0rd>
    - [x] Are the values that were entered correct? `Y`
-   - [ ] sadas
+   - [x] Provide a database type: Enter `DB2`
+   - [x] Provide the full path of the db2jcc.jar: `/opt/ibm/db2/V11.5/java/db2jcc4.jar`
+   - [x] Provide the full path of the license file: `/opt/ibm/db2/V11.5/java/db2jcc_license_cu.jar`
+   - [x] Are the values that were entered correct? `Y`
+   - [x] Do you want to configure a secure connection to your database? `N`
+   - [x] Provide the database host name: Press <ENTER>
+   - [x] Provide the database port number: Press <ENTER>
+   - [x] Provide the database user name: `db2inst1`
+   - [x] Database Passwrod: <YOUR DATABSE PASSWORD>
+   - [x] Provide the database name: `iccdb`
+   - [x] Are the values that were entered correct? `Y`
+   - [x] Do you want to partition your database tables `N` `# we do that in Prod ONLY!`
+   - [x] Are you sure about your selection? `Y`
+   - [x] Enter Default user `admin` password: `P@ssw0rd` `# Feel free to pick your own`
+   - [x] Enter Default `admin` E-Mail address: `Raafat@ibm.com`
+   - [x] Provide a 10 character Event Processor (engine) name [CCenter]: `ccenter`
+   - [x] 
 
 
 </details>
