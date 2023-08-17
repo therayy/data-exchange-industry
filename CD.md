@@ -1,6 +1,6 @@
 # Install [IBM Connect:Direct](https://www.ibm.com/docs/en/connect-direct/6.1.0?topic=connectdirect-v610-pdfs)
 
-   > _This recipe is for deploying the IBM Connect Direct on Red Hat Enterprise Linux assuiming you already got your system subsription done_.
+   > _This recipe is for deploying the IBM Connect Direct on Red Hat Enterprise Linux assuiming you already got your system subsription done & hostname was define as icc.sterling.com_.
 
 ### Section A: [Pre-Cofiguration](./CD.md)
 <details>
@@ -20,7 +20,9 @@ mkdir /home/cdadmin/ibm
 cd /home/cdadmin/ibm
 chmod +x ./*
 ```
-4. Run `./cdinstall`
+4. In this case I extracted the C:D installation tar and renamed it `cd` into that ../ibm directory
+ 
+5. Run `./cdinstall`
 
 </details>
 
@@ -45,7 +47,7 @@ chmod +x ./*
     (4) Connect:Direct for UNIX File Agent
     (5) Connect:Direct Secure+ Option for UNIX
     (6) EXIT
-    Enter your choice:[1] PRESS <ENTER>
+    Enter your choice:[1] #PRESS <ENTER>
     ```
     ##### 💡 First we will do Server and Client then we will come back do File Agent then Secure + 
 
@@ -54,6 +56,25 @@ chmod +x ./*
 - [x] Specify the fully qualified name of the Connect:Direct for UNIX installation
 file (file name prefixed with the absolute path, e.g., /localhome/cdadmin/cdunix): i.e `/home/cdadmin/ibm/cd/cdunix`
 
+- [x] Both Connect:Direct for UNIX Server and Client(CLI/API) Version 6.3.0.0
+will be installed in your system. Do you want to continue?:[Y/N] `Y`   
 
+3. Initial Configuration 
+```bash
+The customization procedure allows you to create configuration
+files for:
+  (1) Configure the Connect:Direct for UNIX Server.
+  (2) Configure the Connect:Direct for UNIX Client.
+  (3) Configure the Connect:Direct for UNIX Server and Client.
+  (4) Configurations requiring root privilege.
+  (5) EXIT.
+Enter your choice:[3] #Press <ENTER>
+```
+- [x] Please enter name of Connect:Direct node you want to customize: `cdnode01` if your doing this for the first machine
+- [x] Take the default on all the following Prompts by Pressing `<ENTER>`
+- [x] Insert remote user record?`Y` this is the user that C:D will authenticate to remote request
+- [x] Enter remote userid:`*` That will allow any-user to access.
+- [x] Enter remote Connect:Direct node name:`*` taking anyone from any machine
+- [x]   
 
 </details>
