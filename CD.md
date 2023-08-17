@@ -37,7 +37,7 @@ chmod +x ./*
 
    > 💡 **OUTPUT**  
    >> Your terminal should look like that 
-    ```
+    ```bash
     Please select one of the following installation options:
     (1) Connect:Direct for UNIX Server and Client(CLI/API)
     (2) Connect:Direct for UNIX Server
@@ -45,10 +45,14 @@ chmod +x ./*
     (4) Connect:Direct for UNIX File Agent
     (5) Connect:Direct Secure+ Option for UNIX
     (6) EXIT
-    Enter your choice:[1]
+    Enter your choice:[1] PRESS <ENTER>
     ```
     ##### 💡 First we will do Server and Client then we will come back do File Agent then Secure + 
 
+2. Connect:Direct for UNIX Server and Client(CLI/API)
+
+- [x] Specify the fully qualified name of the Connect:Direct for UNIX installation
+file (file name prefixed with the absolute path, e.g., /localhome/cdadmin/cdunix): i.e `/home/cdadmin/ibm/cd/cdunix`
 
 
 
