@@ -21,7 +21,7 @@ cd /home/cdadmin/ibm
 chmod +x ./*
 ```
 4. In this case I extracted the C:D installation tar and renamed it `cd` into that ../ibm directory
- 
+
 5. Run `./cdinstall`
 
 </details>
@@ -30,8 +30,8 @@ chmod +x ./*
 <details>
     <summary> Install Connect Direct step by step </summary>
 
-    > 💡 **NOTE**  
-    >> Pressing `<ENTER>` Picks the default value which is in the `[Square Brackets]`
+> 💡 **NOTE**  
+>> Pressing `<ENTER>` Picks the default value which is in the `[Square Brackets]`
 
 - [x] Unix is a registered Trademark of the open group: Press `<ENTER>`
 - [x] You can use /home/cdadmin to shorten the name:[/home/cdadmin/cdunix] Press `<ENTER>`
