@@ -71,10 +71,45 @@ files for:
 Enter your choice:[3] #Press <ENTER>
 ```
 - [x] Please enter name of Connect:Direct node you want to customize: `cdnode01` if your doing this for the first machine
-- [x] Take the default on all the following Prompts by Pressing `<ENTER>`
+- [x] Take the default on all the following Prompts by Pressing `<ENTER>` untill you see remote user record.
 - [x] Insert remote user record?`Y` this is the user that C:D will authenticate to remote request
 - [x] Enter remote userid:`*` That will allow any-user to access.
 - [x] Enter remote Connect:Direct node name:`*` taking anyone from any machine
-- [x]   
+- [x] Enter local userid:`cdadmin`
+- [x] Insert another remote user record?:[Y/N]`N`
+- [x] Insert local user record:[Y/N] `Y` 
+- [x] Enter userid: `cdadmin`
+- [x] Grant Administrative authority `Y`
+- [x] Insert another local user record?:[Y/N] `N`
+
+4. Configurations requiring root privilege
+
+- [x] Take the default on all the following Prompts by Pressing `<ENTER>`
+
+    ```bash
+    The customization procedure allows you to create configuration
+    files for:
+    (1) Configure the Connect:Direct for UNIX Server.
+    (2) Configure the Connect:Direct for UNIX Client.
+    (3) Configure the Connect:Direct for UNIX Server and Client.
+    (4) Configurations requiring root privilege.
+    (5) EXIT.
+    Enter your choice:[3] # Now do `4`
+    ```
+- [x] This option requires root authority. Continue?:[Y/N] `Y`
+- [x] Password: your localmachine root password.
+- [x] Do you want to create the symbolic link?:[Y/N] `Y`
+
+    ```bash
+
+    NOTICE: Connect:Direct for UNIX, by default, will deny proxy to root
+    Please choose deny.access value for root user:
+    (y) root user is not allowed access.
+    (n) root user is allowed local access.
+    (d) root user is allowed local and remote access.
+    Enter your choice:[n] # Press <ENTER>
+    ```
+- [x] Will Connect:Direct for UNIX installer, or a user in the installer's primary group, be starting the service?:[Y/N]`Y`
+ 
 
 </details>
