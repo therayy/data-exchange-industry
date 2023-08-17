@@ -37,16 +37,16 @@ chmod +x ./*
 
    > 💡 **OUTPUT**  
    >> Your terminal should look like that 
-        ```
-        Please select one of the following installation options:
-        (1) Connect:Direct for UNIX Server and Client(CLI/API)
-        (2) Connect:Direct for UNIX Server
-        (3) Connect:Direct for UNIX Client(CLI/API)
-        (4) Connect:Direct for UNIX File Agent
-        (5) Connect:Direct Secure+ Option for UNIX
-        (6) EXIT
-        Enter your choice:[1]
-        ```
+    ```
+    Please select one of the following installation options:
+    (1) Connect:Direct for UNIX Server and Client(CLI/API)
+    (2) Connect:Direct for UNIX Server
+    (3) Connect:Direct for UNIX Client(CLI/API)
+    (4) Connect:Direct for UNIX File Agent
+    (5) Connect:Direct Secure+ Option for UNIX
+    (6) EXIT
+    Enter your choice:[1]
+    ```
     ##### 💡 First we will do Server and Client then we will come back do File Agent then Secure + 
 
 
