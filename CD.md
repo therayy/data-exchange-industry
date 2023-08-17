@@ -23,7 +23,7 @@ chmod +x ./*
 4. In this case I extracted the C:D installation tar and renamed it `cd` into that ../ibm directory
 5. Grab your IP and set your hostname& turn off firewall
 ```bash
-hostnamectl set-hostname cd.sterling.com
+hostnamectl set-hostname cd.com
 ```
 ```bash
 export ip=$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | head -n 1 | awk '{print $2}')
