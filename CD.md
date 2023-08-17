@@ -8,7 +8,7 @@
 
 1.  Adding new user:
 ``` bash
-useradd cdadmin
+useradd cdadmin # If does not exist
 passwd cdadmin #set your password
 ```
 2. Copy over all files into `ibm` folder
@@ -21,8 +21,23 @@ cd /home/cdadmin/ibm
 chmod +x ./*
 ```
 4. In this case I extracted the C:D installation tar and renamed it `cd` into that ../ibm directory
+5. Grab your IP and set your hostname& turn off firewall
+```bash
+hostnamectl set-hostname cd.sterling.com
+```
+```bash
+export ip=$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | head -n 1 | awk '{print $2}')
+echo $ip
+```
+```bash
+vi /etc/hosts # update the 2nd line wiht your IP and Hostname
+```
+```bash
+su - root
+systemctl disable firewalld
+```
 
-5. Run `./cdinstall`
+6. Run `./cdinstall`
 
 </details>
 
@@ -153,12 +168,18 @@ Enter your choice:[3] #Press <ENTER>
     ```
 </details>
 
-### Section B: [Connect:Direct edit .bashrc](./CD.md)
+### Section B: [Connect:Direct Validation and edit .bashrc](./CD.md)
 <details>
-    <summary> Access Connect:Direct from your cli directly </summary>
+    <summary> Validate installation and access Connect:Direct from your cli directly </summary>
 
-1. Accessing C:D
+1. Validation:
 ```bash
+/home/cdadmin/cdunix/etc/cdver 
+/home/cdadmin/cdunix/ndm/bin/cdpmgr
+```
+2. Accessing C:D
+```bash
+echo `
 NDMAPICFG=/home/cdadmin/cdunix/ndm/cfg/cliapi/ndmapi.cfg
 export NDMAPICFG
 ``` 
@@ -169,5 +190,9 @@ export PATH
 ```bash
 ' >> ~/.bashrc
 ```
+```bash
+. ~/.bashrc
+```
+
 
 </details>
