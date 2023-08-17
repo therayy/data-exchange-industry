@@ -111,5 +111,63 @@ Enter your choice:[3] #Press <ENTER>
     ```
 - [x] Will Connect:Direct for UNIX installer, or a user in the installer's primary group, be starting the service?:[Y/N]`Y`
  
+    ```bash
+    The customization procedure allows you to create configuration
+    files for:
+    (1) Configure the Connect:Direct for UNIX Server.
+    (2) Configure the Connect:Direct for UNIX Client.
+    (3) Configure the Connect:Direct for UNIX Server and Client.
+    (4) Configurations requiring root privilege.
+    (5) EXIT.
+    Enter your choice:[3] # This time pick 5
+    ```
+- [x] Would you like to return to the installation menu?:[Y/N]`Y`
+
+    ```bash
+    Please select one of the following installation options:
+    (1) Connect:Direct for UNIX Server and Client(CLI/API)
+    (2) Connect:Direct for UNIX Server
+    (3) Connect:Direct for UNIX Client(CLI/API)
+    (4) Connect:Direct for UNIX File Agent
+    (5) Connect:Direct Secure+ Option for UNIX
+    (6) EXIT
+    Enter your choice:[1] # Pick Number 4
+    ```
+- [x] Connect:Direct For UNIX File Agent `Y`
+
+5. Connect:Direct Secure+ 
+- [x] You have selected /home/cdadmin/cdunix for installation. Do you want to continue?:[Y/N] `Y`
+- [x] Please enter the name of Connect:Direct node you want to customize:[cdnode01] Press `<ENTER>`
+   > 💡 **OUTPUT**  
+   >> Self-signed certificate with label=FileAgent generated successfully.
+- [x] Would you like to return to the installation menu?:[Y/N]`Y`
+    ```bash
+    Please select one of the following installation options:
+    (1) Connect:Direct for UNIX Server and Client(CLI/API)
+    (2) Connect:Direct for UNIX Server
+    (3) Connect:Direct for UNIX Client(CLI/API)
+    (4) Connect:Direct for UNIX File Agent
+    (5) Connect:Direct Secure+ Option for UNIX
+    (6) EXIT
+    Enter your choice:[1] # EXIT 6
+    ```
+</details>
+
+### Section B: [Connect:Direct edit .bashrc](./CD.md)
+<details>
+    <summary> Access Connect:Direct from your cli directly </summary>
+
+1. Accessing C:D
+```bash
+NDMAPICFG=/home/cdadmin/cdunix/ndm/cfg/cliapi/ndmapi.cfg
+export NDMAPICFG
+``` 
+```bash
+PATH=/home/cdadmin/cdunix/ndm/bin:$PATH
+export PATH
+```
+```bash
+' >> ~/.bashrc
+```
 
 </details>
