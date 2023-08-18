@@ -1,4 +1,4 @@
-# <center>Install [IBM Connect:Direct](https://www.ibm.com/docs/en/connect-direct/6.1.0?topic=connectdirect-v610-pdfs)
+# Install [IBM Connect:Direct](https://www.ibm.com/docs/en/connect-direct/6.1.0?topic=connectdirect-v610-pdfs)
 
    > _This recipe is for deploying the IBM Connect Direct on Red Hat Enterprise Linux assuiming you already got your system subsription done & hostname was define as icc.sterling.com_.
 
