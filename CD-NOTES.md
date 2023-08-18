@@ -49,3 +49,7 @@
 - Local users for `cdadmin, cduser, and cdremote`
 - Defined users `cdadmin/passw0rd, cduser/pass, cdremote/1234`
 
+
+| :--- | :---: | :---: | ---: |
+| -------- | -------- | -------- |
+| Left | Center | Center | Right |
