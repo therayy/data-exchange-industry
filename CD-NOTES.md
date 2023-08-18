@@ -1,7 +1,7 @@
 # [IBM Connect:Direct](https://www.ibm.com/docs/en/connect-direct/6.1.0?topic=connectdirect-v610-pdfs) - [Installation & Configuration](./CD.md)
 
-   > _These notes is for C:D the IBM Connect Direct assuiming you already installed it on your system & hostname was define as i.e cdnode01.sterling.com for cdnode01 and cdnode02.sterling.com for cdnode02.
-    >> References <br>
+   > _These notes is for C:D the IBM Connect Direct assuiming you already installed it on your system & hostname was define as i.e cdnode01.sterling.com for cdnode01 and cdnode02.sterling.com for cdnode02._
+   >> References <br>
     <span style="font-size: 10px;">
     <sub> 
     [How the Proxy.attempt & SNODEID work together](https://www.ibm.com/support/pages/connectdirect-unix-how-proxyattempt-and-snodeid-parameters-work-together) </sub > <br>
