@@ -10,20 +10,30 @@
 ### Senario A: 
 **`proxy.attempt=N`**
 , The Remote ID has both a Functional Authority and Proxy record on your C:D node. <br/>
-🔗 Your C:D node will attempt to validate the incoming ID with the Functional Authority record. If this fails, the process fails. ~~C:D will not try the Proxy record.~~ 
+🔗 Your C:D node will attempt to validate the incoming ID with the Functional Authority record. If this fails, the process fails. _C:D will not try the Proxy record._
 
 ### Senario B: 
 **`proxy.attempt=N`**
 , The Remote ID has only a Proxy record on your C:D node <br/>
-🔗 Your C:D node will first look in Functional Authorities for the incoming ID and ~~will not find a record for the incoming ID~~
+🔗 Your C:D node will first look in Functional Authorities for the incoming ID and _will not find a record for the incoming ID_
 - C:D will then look in Proxies for a record. Finding it
 - C:D will map the process to the `LocalUserid` specified in the Proxy record.
-- C:D will then attempt to validate the LocalUserid in the Functional Authorities records. If this validation for the LocalUserid fails, the process fails.
+- C:D will then attempt to validate the `LocalUserid` in the Functional Authorities records. 
+- _If this validation for the LocalUserid fails, the process fails._
 
 ### Senario C: 
 **`proxy.attempt=Y`**
-, The Remote ID has only a Proxy record on your C:D node. <br/>
-🔗 Your C:D node will first look in Functional Authorities for the incoming ID and ~~will not find a record for the incoming ID~~
-- C:D will then look in Proxies for a record. Finding it
+, The Remote ID has both a Functional Authority and Proxy record on your C:D node. <br/>
+🔗 Your C:D node will first look in the Proxy records. Finding the record.
 - C:D will map the process to the `LocalUserid` specified in the Proxy record.
-- C:D will then attempt to validate the LocalUserid in the Functional Authorities records. If this validation for the LocalUserid fails, the process fails.
+- C:D will then attempt to validate the `LocalUserid` in the Functional Authorities records. 
+- If this validation for the `LocalUserid` fails, the process fails. _C:D will not try the Functional Authorities record for the incoming ID._
+
+### Senario D:
+**`proxy.attempt=Y`**
+, The Remote ID has only a Proxy record on your C:D node. <br/>
+🔗 Your C:D node will first look in the Proxy records. Finding the record. 
+- C:D will map the process to the `LocalUserid` specified in the Proxy record. 
+- C:D will then attempt to validate the `LocalUserid` in the Functional Authorities records. 
+- If this validation for the `LocalUserid` fails, the process fails.
+- If your C:D node does not find a Proxy record, it will look in Functional Authorities for a record for the remote ID. Not finding one, _the process will fail._
