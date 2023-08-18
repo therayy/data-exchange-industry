@@ -37,3 +37,15 @@
 - C:D will then attempt to validate the `LocalUserid` in the Functional Authorities records. 
 - If this validation for the `LocalUserid` fails, the process fails.
 - If your C:D node does not find a Proxy record, it will look in Functional Authorities for a record for the remote ID. Not finding one, _the process will fail._
+
+### Best Practice:
+
+1. Define remote user IDs in the Proxies.
+2. **DO NOT** define remote user IDs in Functional Authorities.
+3. Set `proxy.attempt=Y`
+
+### For `userfile.cfg`
+- Various proxies as shown below always mapped to `cdadmin/passw0rd`
+- Local users for `cdadmin, cduser, and cdremote`
+- Defined users `cdadmin/passw0rd, cduser/pass, cdremote/1234`
+
