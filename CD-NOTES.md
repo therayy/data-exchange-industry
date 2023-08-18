@@ -1,4 +1,4 @@
-# <center>[IBM Connect:Direct](https://www.ibm.com/docs/en/connect-direct/6.1.0?topic=connectdirect-v610-pdfs)
+# <center>[IBM Connect:Direct](https://www.ibm.com/docs/en/connect-direct/6.1.0?topic=connectdirect-v610-pdfs) </center>
 
    > _These notes is for C:D the IBM Connect Direct assuiming you already installed it on your system & hostname was define as i.e cdnode01.sterling.com_.
     >> References <br>
