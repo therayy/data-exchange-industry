@@ -49,7 +49,66 @@
 - Local users for `cdadmin, cduser, and cdremote`
 - Defined users `cdadmin/passw0rd, cduser/pass, cdremote/1234`
 
+| Proxy | Local | Snodeid | Result |
+| :--- | :---: | :--- | :--- |
+| cduser@cdnode05 | cdadmin | cduser,passw0rd | fail |
+| cduser@cdnode04 | cdadmin | cduser,passw0rd  | success |
+| cduser@cdnode04 | cdadmin | cduser,pass | success |
+| cduser@cdnode05 | cdadmin | cduser,passw0rd  | success |
+| cduser@cdnode05 | cdadmin | cdremote,1234  | success |
+| cduser@cdnode05 | cdadmin | cdremote,passw0rd  | fail |
+| cduser@cdnode04 | cdadmin | cdremote,passw0rd  | fail |
+| cduser@cdnode05 | cdadmin | cdremote,passw0rd  | success |
+| cduser@cdnode05 | cdadmin | cdremote,1234 | success |
+| cduser@cdnode05 | cdadmin | cdremote,passw0rd  | fail |
 
-| :--- | :---: | :---: | ---: |
-| -------- | -------- | -------- |
-| Left | Center | Center | Right |
+### Removed `cdremote`as Local user in `userfile.cfg`
+| Proxy | Local | Snodeid | Result |
+| :--- | :---: | :--- | :--- |
+| cduser@cdnode05 | cdadmin | cdremote,1234 | fail |
+| cduser@cdnode04 | cdadmin | cdremote,1234  | fail |
+| cduser@cdnode04 | cdadmin | cdremote,passw0rd | success |
+| cduser@cdnode05 | cdadmin | cdremote1,passw0rd  | success |
+| cduser@cdnode05 | cdadmin | cdremote1,1234  | success |
+| cduser@cdnode05 | cdadmin | cdremote1,xxxx  | fail |
+| cduser@cdnode04 | cdadmin | cdremote1,pass  | fail |
+| cduser@cdnode05 | cdadmin | cdadmin,pass  | fail |
+| cduser@cdnode05 | cdadmin | cdremote1,passw0rd | fail |
+| cduser@cdnode05 | cdadmin | cdremote1,1234  | fail |
+| abcdef@cdnode4 | cdadmin | abcdef, qwerty | success |
+| abcdef@cdnode4 | cdadmin | qwerty, qwerty  | fail |
+| abcdef@cdnode4 | cdadmin | qwerty, qwerty  | fail |
+| qwerty@cdnode4 | cdadmin | qwerty, qwerty | success |
+| qwerty@cdnode4 | cdadmin | qwerty, passw0rd | success |
+| *@cdnode4 | cdadmin | qwerty, qwerty  | success |
+| *@cdnode5 | cdadmin | qwerty, qwerty  | fail |
+| *@cdnode5 | cdadmin | cdadmin, qwerty  | fail |
+| *@cdnode4 | cdadmin | cdadmin, qwerty  | success |
+
+In Case of `proxy.attempt=N`
+| Proxy | Local | Snodeid | Result |
+| :--- | :---: | :--- | :--- |
+| *@cdnode4  | cdadmin | cdadmin, qwerty | fail |
+| *@cdnode4  | cdadmin | cdadmin, passw0rd | success |
+| *@cdnode4  | cdadmin | qwerty, passw0rd | fail |
+| qwerty@cdnode4  | cdadmin | qwerty, passw0rd | fail |
+
+### Other Cases:
+- #### `proxy.attempt=n`
+    - FA  **+** proxy ➡ Validate FA, otherwise _FAIL_
+    - Proxy ONLY! ➡ Validate FA first, not there so try proxy next, then _FAIL_
+- #### `proxy.attempt=y`
+    - FA  **+** proxy ➡ Validate Proxy, otherwise _FAIL_
+    - Proxy ONLY! ➡ Validate Proxy, if bad attempt to find FA, then _FAIL_
+- #### `proxy.attempt=y` with secure+ enabled
+| Proxy | Local | Snodeid | Result |
+| :--- | :---: | :--- | :--- |
+| qwerty@cdnode5 | cdadmin | qwerty, passw0rd | fail |
+| qwerty@cdnode5  | cdadmin | qwerty, qwerty | fail |
+| qwerty@cdnode5 | cdadmin | asdfg, asdfg | fail |
+| *@cdnode5  | cdadmin | qwerty, qwerty | fail |
+| *@cdnode5  | cdadmin | cdadmin, qwerty | fail |
+| *@cdnode5  | cdadmin | cdadmin, passw0rd | success |
+| qwerty@cdnode5 | cdadmin | qwerty, passw0rd | success |
+| qwerty@cdnode5 | cdadmin | qwerty, qwerty | success |
+| qwerty@* | cdadmin | qwerty, qwerty| success |
