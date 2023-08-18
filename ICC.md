@@ -1,4 +1,4 @@
-# Install [IBM Sterling Control Center](https://www.ibm.com/docs/en/control-center/6.3.0)
+# <center> Install [IBM Sterling Control Center](https://www.ibm.com/docs/en/control-center/6.3.0)
 
    > _This recipe is for deploying the IBM Sterling Control Center on Red Hat Enterprise Linux assuiming you already got your system subsription done and DB2 deployed_.
 
