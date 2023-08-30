@@ -195,5 +195,14 @@ Extra STEP:
 PATH=/home/cdadmin/cdunix/ndm/bin:$PATH
 export PATH
 ```
-
+#### TEST INSTALLED SAMPLE
+#### SHOULD PLACE CDDELETE.ME FILE /home/cdadmin/cdunix/work
+direct>
+```bash
+select statistics;
+submit file=/home/cdadmin/cdunix/ndm/bin/sample.cd;
+select process pnumber=1;
+select stat pnum=1 det;
+quit;
+```
 </details>
