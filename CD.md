@@ -183,16 +183,17 @@ echo `
 NDMAPICFG=/home/cdadmin/cdunix/ndm/cfg/cliapi/ndmapi.cfg
 export NDMAPICFG
 ``` 
-```bash
-PATH=/home/cdadmin/cdunix/ndm/bin:$PATH
-export PATH
-```
+
 ```bash
 ' >> ~/.bashrc
 ```
 ```bash
 . ~/.bashrc
 ```
-
+Extra STEP:
+```bash
+PATH=/home/cdadmin/cdunix/ndm/bin:$PATH
+export PATH
+```
 
 </details>
