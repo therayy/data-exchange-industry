@@ -179,7 +179,7 @@ Enter your choice:[3] #Press <ENTER>
 ```
 2. Accessing C:D
 ```bash
-echo `
+echo '
 NDMAPICFG=/home/cdadmin/cdunix/ndm/cfg/cliapi/ndmapi.cfg
 export NDMAPICFG
 ``` 
