@@ -168,7 +168,7 @@ Enter your choice:[3] #Press <ENTER>
     ```
 </details>
 
-### Section B: [Connect:Direct Validation and edit .bashrc](./CD.md)
+### Section C: [Connect:Direct Validation and edit .bashrc](./CD.md)
 <details>
     <summary> Validate installation and access Connect:Direct from your cli directly </summary>
 
